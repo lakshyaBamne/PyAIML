@@ -1,1 +1,0 @@
-from .load_practical import load_practical
