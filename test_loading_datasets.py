@@ -20,10 +20,10 @@ from AimL.Datasets.UnsupervisedDataset import load_credit_details
 
 # use the function to load the data set
 # the function returns a Pandas DataFrame
-df1 = load_practical()
+df1 = load_practical(PLOT=True)
 
 # you can add the PLOT option in the functions to visualize the imported data
-df2 = load_credit_details(PLOT=True)
+df2 = load_credit_details()
 
 
 

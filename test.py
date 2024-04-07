@@ -3,17 +3,12 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# load the data set
-from AimL.Datasets import load_practical
+from AimL.Datasets import GenerateClassificationData
 
-# import the simple linear regression model
-from AimL.SupervisedLearning.GLM.SLR import simple_linear_regression
+FUNCTION = "POLYNOMIAL-3"
+NUM = 1000
 
-# apply the model to the data
-df = load_practical(PLOT=True)
+data = GenerateClassificationData(FUNCTION, NUM)
 
-x = np.array(df["x"])
-y = np.array(df["y"])
-
-slr_params = simple_linear_regression(x, y, reg_title="x", res_title="y")
+data.visualize_generated_data()
 
